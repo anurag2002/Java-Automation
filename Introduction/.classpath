@@ -18,5 +18,10 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="D:/apps/testng-7.10.2.jar"/>
+	<classpathentry kind="lib" path="D:/apps/commons-io-2.19.0/commons-io-2.19.0.jar"/>
+	<classpathentry kind="lib" path="D:/apps/commons-io-2.19.0/commons-io-2.19.0-javadoc.jar"/>
+	<classpathentry kind="lib" path="D:/apps/commons-io-2.19.0/commons-io-2.19.0-sources.jar"/>
+	<classpathentry kind="lib" path="D:/apps/commons-io-2.19.0/commons-io-2.19.0-tests.jar"/>
+	<classpathentry kind="lib" path="D:/apps/commons-io-2.19.0/commons-io-2.19.0-test-sources.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

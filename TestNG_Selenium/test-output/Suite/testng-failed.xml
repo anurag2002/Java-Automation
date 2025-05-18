@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="password" value="Alert1234"/>
+  <parameter name="username" value="anurag.pandey"/>
+  <listeners>
+    <listener class-name="introduction.ListenersTestNG"/>
+  </listeners>
+  <test thread-count="2" parallel="tests" name="class3(failed)">
+    <parameter name="localPassword" value="Clay1234"/>
+    <parameter name="localUsername" value="simone.anand"/>
+    <classes>
+      <class name="introduction.Introduction_To_TestNG_5">
+        <methods>
+          <include name="testFailure"/>
+        </methods>
+      </class> <!-- introduction.Introduction_To_TestNG_5 -->
+    </classes>
+  </test> <!-- class3(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -1,6 +1,7 @@
 package seleniumAutomation;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import seleniumAutomation.pageobjects.LandingPage;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -28,7 +29,7 @@ public class StandAloneTest {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get("https://rahulshettyacademy.com/client");
 		
-		driver.manage().window().maximize();
+		
 		
 		//Enter email and password to login
 		driver.findElement(By.id("userEmail")).sendKeys("test@test.cc");

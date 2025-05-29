@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import seleniumAutomation.pageobjects.CartPage;
+import seleniumAutomation.pageobjects.OrderHistoryPage;
 
 public class AbstractComponents {
 
@@ -24,10 +25,18 @@ public class AbstractComponents {
 
 	@FindBy(xpath = "//button[text()='  Cart ']")
 	WebElement cartBtn;
+	
+	@FindBy(xpath = "//button[text()='  ORDERS']")
+	WebElement orderBtn;
 
 	public void waitForElementToAppear(By findBy) {
 		WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(5));
 		w.until(ExpectedConditions.visibilityOfElementLocated(findBy));
+	}
+	
+	public void waitForElementToAppear(WebElement findBy) {
+		WebDriverWait w = new WebDriverWait(driver, Duration.ofSeconds(5));
+		w.until(ExpectedConditions.visibilityOf(findBy));
 	}
 
 	public void waitForElementToDisappear(WebElement findBy) {
@@ -38,6 +47,11 @@ public class AbstractComponents {
 	public CartPage goToCartPage() {
 		cartBtn.click();
 		return new CartPage(driver);
+	}
+	
+	public OrderHistoryPage goToOrderPage() {
+		orderBtn.click();
+		return new OrderHistoryPage(driver);
 	}
 
 }

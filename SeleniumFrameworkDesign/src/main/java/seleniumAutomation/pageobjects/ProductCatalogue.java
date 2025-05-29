@@ -48,9 +48,16 @@ public class ProductCatalogue extends AbstractComponents {
 
 	public void addProductToCard(String productName) {
 		WebElement prod = getProductByName(productName);
-		prod.findElement(addToCart).click();
-		waitForElementToAppear(alertPopupMessage);
+		if (verifyProduct(productName)) {
+			prod.findElement(addToCart).click();
+			waitForElementToAppear(alertPopupMessage);
 //		waitForElementToDisappear(spinner);
+		}
+	}
+	
+	public boolean verifyProduct(String productName) {
+		WebElement prod = getProductByName(productName);
+		return (prod != null);
 	}
 
 	public void printAllProduct() {

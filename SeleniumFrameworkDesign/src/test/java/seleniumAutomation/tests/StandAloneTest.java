@@ -1,4 +1,4 @@
-package seleniumAutomation;
+package seleniumAutomation.tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import seleniumAutomation.pageobjects.LandingPage;

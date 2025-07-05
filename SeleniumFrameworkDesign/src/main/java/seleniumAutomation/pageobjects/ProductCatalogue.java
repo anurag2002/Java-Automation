@@ -32,7 +32,7 @@ public class ProductCatalogue extends AbstractComponents {
 	WebElement spinner;
 
 	By addToCart = By.xpath(".//button[text()=' Add To Cart']");
-	By alertPopupMessage = By.xpath("//div[@role='alertdialog']");
+	By alertPopupMessage = By.xpath("//div[@role='alert']");
 	By productName = By.tagName("b");
 
 	public List<WebElement> getProductList() {
@@ -47,6 +47,7 @@ public class ProductCatalogue extends AbstractComponents {
 	}
 
 	public void addProductToCard(String productName) {
+		System.out.println("Product Name:: " + productName);
 		WebElement prod = getProductByName(productName);
 		if (verifyProduct(productName)) {
 			prod.findElement(addToCart).click();

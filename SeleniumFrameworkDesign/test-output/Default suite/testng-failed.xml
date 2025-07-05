@@ -5,7 +5,9 @@
     <classes>
       <class name="seleniumAutomation.tests.SubmitOrderTest">
         <methods>
-          <include name="submitOrder"/>
+          <include name="launchApplication"/>
+          <include name="submitOrder" invocation-numbers="0 1"/>
+          <include name="closeApplication"/>
         </methods>
       </class> <!-- seleniumAutomation.tests.SubmitOrderTest -->
     </classes>

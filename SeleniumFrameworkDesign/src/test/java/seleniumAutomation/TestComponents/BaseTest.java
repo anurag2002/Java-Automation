@@ -10,8 +10,12 @@ import java.util.List;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -32,11 +36,23 @@ public class BaseTest {
 		FileInputStream fs = new FileInputStream(System.getProperty("user.dir")
 				+ "\\src\\main\\java\\seleniumAutomation\\resources\\GlobalData.properties");
 		prop.load(fs);
-		String browserName = prop.getProperty("browser");
+		String browserName = (System.getProperty("browser") != null) ? System.getProperty("browser")
+				: prop.getProperty("browser");
 
-		if (browserName.equalsIgnoreCase("chrome")) {
+		if (browserName.contains("chrome")) {
+			ChromeOptions options = new ChromeOptions();
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			if (browserName.contains("headless")) {
+				System.out.println("Headless mode enabled");
+				options.addArguments("--headless=new"); // For Chrome 109+
+				options.addArguments("--disable-gpu");
+				options.addArguments("--window-size=1920,1080");
+				options.addArguments("--no-sandbox");
+				options.addArguments("--disable-dev-shm-usage");
+
+			}
+			driver = new ChromeDriver(options);
+			driver.manage().window().setSize(new Dimension(1920,1080)); // sets the browser to full screen mode
 
 		} else if (browserName.equalsIgnoreCase("firefox")) {
 			// firefox driver
@@ -61,6 +77,14 @@ public class BaseTest {
 				new TypeReference<List<HashMap<String, String>>>() {
 				});
 		return data;
+	}
+
+	public String getScreenshot(String testCaseName, WebDriver driver) throws IOException {
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		File file = new File(System.getProperty("user.dir") + "//reports//" + testCaseName + ".png");
+		FileUtils.copyFile(source, file);
+		return System.getProperty("user.dir") + "//reports//" + testCaseName + ".png";
 	}
 
 	@BeforeMethod(alwaysRun = true)

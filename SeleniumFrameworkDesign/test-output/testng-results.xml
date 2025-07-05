@@ -1,91 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="6" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-29T14:15:41 IST" name="Suite" finished-at="2025-05-29T14:16:07 IST" duration-ms="26672">
+  <suite started-at="2025-07-05T19:30:32 IST" name="Suite" finished-at="2025-07-05T19:30:59 IST" duration-ms="26055">
     <groups>
       <group name="Purchase">
-        <method signature="SubmitOrderTest.submitOrder(java.util.HashMap)[pri:0, instance:seleniumAutomation.tests.SubmitOrderTest@1cf6d1be]" name="submitOrder" class="seleniumAutomation.tests.SubmitOrderTest"/>
-        <method signature="SubmitOrderTest.orderHistory(java.util.HashMap)[pri:0, instance:seleniumAutomation.tests.SubmitOrderTest@1cf6d1be]" name="orderHistory" class="seleniumAutomation.tests.SubmitOrderTest"/>
+        <method signature="SubmitOrderTest.submitOrder(java.util.HashMap)[pri:0, instance:seleniumAutomation.tests.SubmitOrderTest@6e4566f1]" name="submitOrder" class="seleniumAutomation.tests.SubmitOrderTest"/>
+        <method signature="SubmitOrderTest.orderHistory(java.util.HashMap)[pri:0, instance:seleniumAutomation.tests.SubmitOrderTest@6e4566f1]" name="orderHistory" class="seleniumAutomation.tests.SubmitOrderTest"/>
       </group> <!-- Purchase -->
+      <group name="Error Handling">
+        <method signature="ErrorValidationsTest.loginErrorValidation()[pri:0, instance:seleniumAutomation.tests.ErrorValidationsTest@74eb909f]" name="loginErrorValidation" class="seleniumAutomation.tests.ErrorValidationsTest"/>
+      </group> <!-- Error Handling -->
     </groups>
-    <test started-at="2025-05-29T14:15:41 IST" name="Error Validations" finished-at="2025-05-29T14:15:41 IST" duration-ms="10">
+    <test started-at="2025-07-05T19:30:32 IST" name="Error Validations" finished-at="2025-07-05T19:30:43 IST" duration-ms="10741">
+      <class name="seleniumAutomation.tests.ErrorValidationsTest">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:seleniumAutomation.tests.ErrorValidationsTest@74eb909f]" started-at="2025-07-05T19:30:32 IST" name="launchApplication" finished-at="2025-07-05T19:30:35 IST" duration-ms="2730" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="loginErrorValidation()[pri:0, instance:seleniumAutomation.tests.ErrorValidationsTest@74eb909f]" started-at="2025-07-05T19:30:35 IST" name="loginErrorValidation" finished-at="2025-07-05T19:30:36 IST" duration-ms="982" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginErrorValidation -->
+        <test-method is-config="true" signature="closeApplication()[pri:0, instance:seleniumAutomation.tests.ErrorValidationsTest@74eb909f]" started-at="2025-07-05T19:30:36 IST" name="closeApplication" finished-at="2025-07-05T19:30:38 IST" duration-ms="2148" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:seleniumAutomation.tests.ErrorValidationsTest@74eb909f]" started-at="2025-07-05T19:30:38 IST" name="launchApplication" finished-at="2025-07-05T19:30:40 IST" duration-ms="1910" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="productPageErrorValidation()[pri:0, instance:seleniumAutomation.tests.ErrorValidationsTest@74eb909f]" started-at="2025-07-05T19:30:40 IST" name="productPageErrorValidation" finished-at="2025-07-05T19:30:41 IST" duration-ms="796" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productPageErrorValidation -->
+        <test-method is-config="true" signature="closeApplication()[pri:0, instance:seleniumAutomation.tests.ErrorValidationsTest@74eb909f]" started-at="2025-07-05T19:30:41 IST" name="closeApplication" finished-at="2025-07-05T19:30:43 IST" duration-ms="2130" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- seleniumAutomation.tests.ErrorValidationsTest -->
     </test> <!-- Error Validations -->
-    <test started-at="2025-05-29T14:15:41 IST" name="Submit Order" finished-at="2025-05-29T14:16:07 IST" duration-ms="26672">
+    <test started-at="2025-07-05T19:30:32 IST" name="Submit Order" finished-at="2025-07-05T19:30:59 IST" duration-ms="26055">
       <class name="seleniumAutomation.tests.SubmitOrderTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:seleniumAutomation.tests.SubmitOrderTest@1cf6d1be]" started-at="2025-05-29T14:15:41 IST" name="launchApplication" finished-at="2025-05-29T14:15:44 IST" duration-ms="3319" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:seleniumAutomation.tests.SubmitOrderTest@6e4566f1]" started-at="2025-07-05T19:30:33 IST" name="launchApplication" finished-at="2025-07-05T19:30:35 IST" duration-ms="2464" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:seleniumAutomation.tests.SubmitOrderTest@1cf6d1be]" started-at="2025-05-29T14:15:44 IST" name="submitOrder" data-provider="getData" finished-at="2025-05-29T14:15:47 IST" duration-ms="2735" status="PASS">
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:seleniumAutomation.tests.SubmitOrderTest@6e4566f1]" started-at="2025-07-05T19:30:35 IST" name="submitOrder" data-provider="getData" finished-at="2025-07-05T19:30:38 IST" duration-ms="2992" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{password=Alert1234, product=ADIDAS ORIGINAL, email=test@test.cc}]]>
+                <![CDATA[{password=Alert1234, email=test@test.cc, productName=ADIDAS ORIGINAL}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="closeApplication()[pri:0, instance:seleniumAutomation.tests.SubmitOrderTest@1cf6d1be]" started-at="2025-05-29T14:15:47 IST" name="closeApplication" finished-at="2025-05-29T14:15:49 IST" duration-ms="2145" status="PASS">
+        <test-method is-config="true" signature="closeApplication()[pri:0, instance:seleniumAutomation.tests.SubmitOrderTest@6e4566f1]" started-at="2025-07-05T19:30:38 IST" name="closeApplication" finished-at="2025-07-05T19:30:40 IST" duration-ms="2149" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApplication -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:seleniumAutomation.tests.SubmitOrderTest@1cf6d1be]" started-at="2025-05-29T14:15:49 IST" name="launchApplication" finished-at="2025-05-29T14:15:52 IST" duration-ms="2684" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:seleniumAutomation.tests.SubmitOrderTest@6e4566f1]" started-at="2025-07-05T19:30:40 IST" name="launchApplication" finished-at="2025-07-05T19:30:44 IST" duration-ms="3827" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:seleniumAutomation.tests.SubmitOrderTest@1cf6d1be]" started-at="2025-05-29T14:15:52 IST" name="submitOrder" data-provider="getData" finished-at="2025-05-29T14:15:54 IST" duration-ms="2771" status="PASS">
+        <test-method signature="submitOrder(java.util.HashMap)[pri:0, instance:seleniumAutomation.tests.SubmitOrderTest@6e4566f1]" started-at="2025-07-05T19:30:44 IST" name="submitOrder" data-provider="getData" finished-at="2025-07-05T19:30:47 IST" duration-ms="3060" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{password=Alert1234, product=IPHONE 13 PRO, email=testing@test.cc}]]>
+                <![CDATA[{password=Alert1234, email=testing@test.cc, productName=IPHONE 13 PRO}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- submitOrder -->
-        <test-method is-config="true" signature="closeApplication()[pri:0, instance:seleniumAutomation.tests.SubmitOrderTest@1cf6d1be]" started-at="2025-05-29T14:15:54 IST" name="closeApplication" finished-at="2025-05-29T14:15:57 IST" duration-ms="2162" status="PASS">
+        <test-method is-config="true" signature="closeApplication()[pri:0, instance:seleniumAutomation.tests.SubmitOrderTest@6e4566f1]" started-at="2025-07-05T19:30:47 IST" name="closeApplication" finished-at="2025-07-05T19:30:49 IST" duration-ms="2153" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApplication -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:seleniumAutomation.tests.SubmitOrderTest@1cf6d1be]" started-at="2025-05-29T14:15:57 IST" name="launchApplication" finished-at="2025-05-29T14:15:59 IST" duration-ms="2826" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:seleniumAutomation.tests.SubmitOrderTest@6e4566f1]" started-at="2025-07-05T19:30:49 IST" name="launchApplication" finished-at="2025-07-05T19:30:51 IST" duration-ms="1886" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="orderHistory(java.util.HashMap)[pri:0, instance:seleniumAutomation.tests.SubmitOrderTest@1cf6d1be]" started-at="2025-05-29T14:15:59 IST" name="orderHistory" data-provider="getData" finished-at="2025-05-29T14:16:00 IST" depends-on-methods="seleniumAutomation.tests.SubmitOrderTest.submitOrder" duration-ms="490" status="PASS">
+        <test-method signature="orderHistory(java.util.HashMap)[pri:0, instance:seleniumAutomation.tests.SubmitOrderTest@6e4566f1]" started-at="2025-07-05T19:30:51 IST" name="orderHistory" data-provider="getData" finished-at="2025-07-05T19:30:52 IST" depends-on-methods="seleniumAutomation.tests.SubmitOrderTest.submitOrder" duration-ms="555" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{password=Alert1234, product=ADIDAS ORIGINAL, email=test@test.cc}]]>
+                <![CDATA[{password=Alert1234, email=test@test.cc, productName=ADIDAS ORIGINAL}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- orderHistory -->
-        <test-method is-config="true" signature="closeApplication()[pri:0, instance:seleniumAutomation.tests.SubmitOrderTest@1cf6d1be]" started-at="2025-05-29T14:16:00 IST" name="closeApplication" finished-at="2025-05-29T14:16:02 IST" duration-ms="2147" status="PASS">
+        <test-method is-config="true" signature="closeApplication()[pri:0, instance:seleniumAutomation.tests.SubmitOrderTest@6e4566f1]" started-at="2025-07-05T19:30:52 IST" name="closeApplication" finished-at="2025-07-05T19:30:54 IST" duration-ms="2158" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApplication -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:seleniumAutomation.tests.SubmitOrderTest@1cf6d1be]" started-at="2025-05-29T14:16:02 IST" name="launchApplication" finished-at="2025-05-29T14:16:05 IST" duration-ms="2661" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:seleniumAutomation.tests.SubmitOrderTest@6e4566f1]" started-at="2025-07-05T19:30:54 IST" name="launchApplication" finished-at="2025-07-05T19:30:56 IST" duration-ms="1912" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="orderHistory(java.util.HashMap)[pri:0, instance:seleniumAutomation.tests.SubmitOrderTest@1cf6d1be]" started-at="2025-05-29T14:16:05 IST" name="orderHistory" data-provider="getData" finished-at="2025-05-29T14:16:05 IST" depends-on-methods="seleniumAutomation.tests.SubmitOrderTest.submitOrder" duration-ms="529" status="PASS">
+        <test-method signature="orderHistory(java.util.HashMap)[pri:0, instance:seleniumAutomation.tests.SubmitOrderTest@6e4566f1]" started-at="2025-07-05T19:30:56 IST" name="orderHistory" data-provider="getData" finished-at="2025-07-05T19:30:56 IST" depends-on-methods="seleniumAutomation.tests.SubmitOrderTest.submitOrder" duration-ms="531" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{password=Alert1234, product=IPHONE 13 PRO, email=testing@test.cc}]]>
+                <![CDATA[{password=Alert1234, email=testing@test.cc, productName=IPHONE 13 PRO}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- orderHistory -->
-        <test-method is-config="true" signature="closeApplication()[pri:0, instance:seleniumAutomation.tests.SubmitOrderTest@1cf6d1be]" started-at="2025-05-29T14:16:05 IST" name="closeApplication" finished-at="2025-05-29T14:16:07 IST" duration-ms="2148" status="PASS">
+        <test-method is-config="true" signature="closeApplication()[pri:0, instance:seleniumAutomation.tests.SubmitOrderTest@6e4566f1]" started-at="2025-07-05T19:30:56 IST" name="closeApplication" finished-at="2025-07-05T19:30:59 IST" duration-ms="2140" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApplication -->

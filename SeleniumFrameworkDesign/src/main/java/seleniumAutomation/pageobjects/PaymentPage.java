@@ -26,15 +26,15 @@ public class PaymentPage extends AbstractComponents {
 	// PageFactory
 
 	@FindBy(xpath = "//input[@placeholder='Select Country']")
-	WebElement countryField;
+	private WebElement countryField;
 
 	@FindBy(xpath = "//button/span")
-	List<WebElement> countryList;
+	private List<WebElement> countryList;
 
 	@FindBy(xpath = "//div[@class='actions']/a")
-	WebElement placeOrderBtn;
+	private WebElement placeOrderBtn;
 
-	By countryListBy = By.xpath("//button/span");
+	private By countryListBy = By.xpath("//button/span");
 
 	public void enterCountry(String country) {
 		countryField.sendKeys(country);

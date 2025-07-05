@@ -1,6 +1,6 @@
 package seleniumAutomation.tests;
 
-import seleniumAutomation.TestComponents.BaseTest;
+import seleniumAutomation.TestComponents.*;
 import seleniumAutomation.pageobjects.ProductCatalogue;
 
 import java.io.IOException;
@@ -8,9 +8,10 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+
 public class ErrorValidationsTest extends BaseTest {
 
-	@Test(groups = {"Error Handling"})
+	@Test(groups = {"Error Handling"},retryAnalyzer=Retry.class)
 	public void loginErrorValidation() throws IOException, InterruptedException {
 		// TODO Auto-generated method stub
 		// Landing Page handling

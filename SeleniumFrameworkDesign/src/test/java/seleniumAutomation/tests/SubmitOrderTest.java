@@ -35,14 +35,14 @@ public class SubmitOrderTest extends BaseTest {
 
 		// Add Product
 		// Check if toast has appeared or not
-		productCatalogue.addProductToCard(map.get("product"));
+		productCatalogue.addProductToCard(map.get("productName"));
 		System.out.println("Product added");
 
 		// open cart
 		CartPage cart = productCatalogue.goToCartPage();
 
 		// Verify the products added
-		Assert.assertTrue(cart.verifyProducts(map.get("product")));
+		Assert.assertTrue(cart.verifyProducts(map.get("productName")));
 
 		// checkout
 		PaymentPage payPage = cart.checkout();
@@ -68,7 +68,7 @@ public class SubmitOrderTest extends BaseTest {
 	public void orderHistory(HashMap<String, String> map) {
 		ProductCatalogue productCatalogue = landingPage.loginApplication(map.get("email"), map.get("password"));
 		OrderHistoryPage orderHist = productCatalogue.goToOrderPage();
-		Assert.assertTrue(orderHist.verifyOrder(map.get("product")));
+		Assert.assertTrue(orderHist.verifyOrder(map.get("productName")));
 	}
 
 	@DataProvider
@@ -78,14 +78,6 @@ public class SubmitOrderTest extends BaseTest {
 				"\\src\\test\\java\\seleniumAutomation\\data\\PurchaseOrder.json");
 
 		return new Object[][] { { map.get(0) }, { map.get(1) } };
-	}
-	
-	public String getScreenshot(String testCaseName) throws IOException {
-		TakesScreenshot ts = (TakesScreenshot) driver;
-		File source = ts.getScreenshotAs(OutputType.FILE);
-		File file = new File(System.getProperty("user.dir")+"//reports//"+testCaseName+".png");
-		FileUtils.copyFile(source, file);
-		return System.getProperty("user.dir")+"//reports//"+testCaseName+".png";
 	}
 
 }

@@ -15,16 +15,4 @@
       </class> <!-- seleniumAutomation.tests.ErrorValidationsTest -->
     </classes>
   </test> <!-- Error Validations(failed) -->
-  <test thread-count="5" parallel="tests" name="Submit Order(failed)">
-    <classes>
-      <class name="seleniumAutomation.tests.SubmitOrderTest">
-        <methods>
-          <include name="orderHistory"/>
-          <include name="launchApplication"/>
-          <include name="submitOrder" invocation-numbers="0 1"/>
-          <include name="closeApplication"/>
-        </methods>
-      </class> <!-- seleniumAutomation.tests.SubmitOrderTest -->
-    </classes>
-  </test> <!-- Submit Order(failed) -->
 </suite> <!-- Failed suite [Suite] -->

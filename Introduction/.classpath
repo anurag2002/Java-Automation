@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
-		<attributes>
-			<attribute name="module" value="true"/>
-			<attribute name="maven.pomderived" value="true"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry including="**/*.java" kind="src" output="target/classes" path="src">
 		<attributes>
 			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-17">
+		<attributes>
+			<attribute name="module" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
@@ -17,11 +17,30 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/apps/testng-7.10.2.jar"/>
-	<classpathentry kind="lib" path="D:/apps/commons-io-2.19.0/commons-io-2.19.0.jar"/>
-	<classpathentry kind="lib" path="D:/apps/commons-io-2.19.0/commons-io-2.19.0-javadoc.jar"/>
-	<classpathentry kind="lib" path="D:/apps/commons-io-2.19.0/commons-io-2.19.0-sources.jar"/>
-	<classpathentry kind="lib" path="D:/apps/commons-io-2.19.0/commons-io-2.19.0-tests.jar"/>
-	<classpathentry kind="lib" path="D:/apps/commons-io-2.19.0/commons-io-2.19.0-test-sources.jar"/>
+	<classpathentry kind="lib" path="D:/apps/commons-io-2.19.0/commons-io-2.19.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/apps/commons-io-2.19.0/commons-io-2.19.0-javadoc.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/apps/commons-io-2.19.0/commons-io-2.19.0-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/apps/commons-io-2.19.0/commons-io-2.19.0-tests.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/apps/commons-io-2.19.0/commons-io-2.19.0-test-sources.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

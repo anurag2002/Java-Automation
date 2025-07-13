@@ -54,7 +54,7 @@ public class StepDefinitionImpl extends BaseTest {
 		Assert.assertTrue(last.headingCheck(string));
 		driver.close();
 	}
-	
+
 	@Then("{string} message is displayed.")
 	public void message_is_displayed(String string) {
 		Assert.assertEquals(landingPage.errorMessage(), string);
